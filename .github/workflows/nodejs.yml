@@ -26,4 +26,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - uses: technote-space/release-github-actions@v5
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: "Test"
+          release_name: "test"
+          draft: false
+          prerelease: false
