@@ -26,16 +26,4 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
-
-        with:
-          tag_name: "newTestVersion"
-          release_name: "v4.45.0"
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
-          draft: false
-          prerelease: false
+      - uses: technote-space/release-github-actions@v5
